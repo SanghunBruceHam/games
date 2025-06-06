@@ -29,3 +29,5 @@ jobs:
           git add sitemap.xml
           git commit -m "Auto-generate sitemap.xml"
           git push
+      - name: Pull latest main
+      -  run: git pull --rebase origin main
