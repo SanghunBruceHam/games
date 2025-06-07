@@ -9,6 +9,7 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -20,9 +21,6 @@ jobs:
 
       - name: Generate sitemap.xml
         run: python sitemap_generator.py
-
-      - name: Pull latest main
-        run: git pull --rebase origin main
 
       - name: Commit and push sitemap
         run: |
