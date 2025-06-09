@@ -892,7 +892,7 @@
       t._timer = setTimeout(() => t.style.opacity = 0, 1700);
     }
     function shareToThreads() {
-      const shareText = `🐾 パンパンクリック ネオンワールドで${gameState.score}点を記録！君も挑戦してみて 👉`;
+      const shareText = `🐾 パンパンクリック </br>ネオンワールドで${gameState.score}点を記録！君も挑戦してみて 👉`;
       const link = window.location.href;
       navigator.clipboard.writeText(`${shareText}\n${link}`).then(() => {
         showToast("Threadsシェア文がコピーされました！");
