@@ -506,7 +506,7 @@
   <div class="game-container" id="gameContainer">
     <button id="openSettings" aria-label="設定を開く">⚙️</button>
     <button id="toggleTheme" aria-label="ダーク/ライトモード切替">🌙</button>
-    <h1>🐾 パンパンクリック ネオンワールド</h1>
+    <h1>🐾 パンパンクリック </br> ネオンワールド</h1>
     <button id="toggleHelp" aria-label="ヘルプ表示/非表示">ヘルプを隠す 📘</button>
     <div id="instructions">
       <ul>
@@ -892,7 +892,7 @@
       t._timer = setTimeout(() => t.style.opacity = 0, 1700);
     }
     function shareToThreads() {
-      const shareText = `🐾 パンパンクリック </br>ネオンワールドで${gameState.score}点を記録！君も挑戦してみて 👉`;
+      const shareText = `🐾 パンパンクリック ネオンワールドで${gameState.score}点を記録！君も挑戦してみて 👉`;
       const link = window.location.href;
       navigator.clipboard.writeText(`${shareText}\n${link}`).then(() => {
         showToast("Threadsシェア文がコピーされました！");
