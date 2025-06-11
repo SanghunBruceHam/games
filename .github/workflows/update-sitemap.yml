@@ -55,4 +55,5 @@ jobs:
         if: steps.check_diff.outputs.changed == 'true'
         run: |
           curl "https://www.bing.com/indexnow?url=https://games.mahalohana-bruce.com/sitemap.xml&key=ac03cce895044e07ae9ef7d2260564ad"
+          curl "https://www.bing.com/ping?sitemap=https://games.mahalohana-bruce.com/sitemap.xml"
           curl "https://webmaster.yandex.com/ping?sitemap=https://games.mahalohana-bruce.com/sitemap.xml"
