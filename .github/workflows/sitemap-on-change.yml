@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '**.html'         # HTML 파일 변경만 감지
+      - '**.html'
 
 jobs:
   update-sitemap:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2  # git diff 위해 필요
+          fetch-depth: 2
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -23,8 +23,7 @@ jobs:
           python-version: '3.10'
 
       - name: Generate sitemap if changed
-        run: |
-          python sitemap_generator.py
+        run: python sitemap_generator.py
 
       - name: Check if sitemap.xml changed
         id: check_diff
@@ -33,6 +32,7 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Commit and push if changed
         if: steps.check_diff.outputs.changed == 'true'
