@@ -26,7 +26,7 @@ jobs:
           fi
 
           for file in $FILES; do
-            URL="https://mahalohana-bruce.com/${file}"
+            URL="https://games.mahalohana-bruce.com/${file}"
             echo "🔗 Pinging: $URL"
             curl "https://www.bing.com/indexnow?url=${URL}&key=ac03cce895044e07ae9ef7d2260564ad"
           done
